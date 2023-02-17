@@ -25,10 +25,10 @@ public class ListenerImplementation extends BaseClass implements ITestListener{
 		File dest=new File("./ScreenShot/"+res+".png");
 		try {
 			FileUtils.copyFile(src, dest);
-		} 
-		catch (IOException e) {
-			
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
+		
 	}
 	public void onTestSkipped(ITestResult result) {
 		

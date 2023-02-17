@@ -14,9 +14,9 @@ private WebElement newCustomer;
 private WebElement custName;
 @FindBy(xpath = "//textarea[@placeholder='Enter Customer Description']")
 private WebElement custDesc;
-@FindBy(xpath = "(//div[@class='dropdownButton'])[1]")
+@FindBy(xpath = "(//div[@class='dropdownButton'])[15]")
 private WebElement selectCustDD;
-@FindBy(xpath = "//div[@class='itemRow cpItemRow ' and text()='Our company']")
+@FindBy(xpath = "//div[text()='Our company' and @class='itemRow cpItemRow ']")
 private WebElement ourCompany;
 @FindBy(xpath = "//div[@class='components_button_label' and text()='Create Customer']")
 private WebElement createCustomer;

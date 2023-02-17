@@ -15,7 +15,7 @@ import com.actitime.generic.BaseClass;
 import com.actitime.generic.FileLib;
 import com.actitime.pom.HomePage;
 import com.actitime.pom.TaskPage;
-//@Listeners(com.actitime.generic.ListenerImplementation.class)
+@Listeners(com.actitime.generic.ListenerImplementation.class)
 public class CustomerModule extends BaseClass{
 	@Test
 public void createCustomer() throws EncryptedDocumentException, IOException, InterruptedException {
@@ -28,12 +28,18 @@ public void createCustomer() throws EncryptedDocumentException, IOException, Int
 	Thread.sleep(3000);
 	TaskPage t =new TaskPage(driver);
 	t.getAddNewBtn().click();
+	Thread.sleep(2000);
 	t.getNewCustomer().click();
+	Thread.sleep(2000);
 	t.getCustName().sendKeys(custName);
 	t.getCustDesc().sendKeys(custDesc);
+	Thread.sleep(2000);
 	t.getSelectCustDD().click();
+	Thread.sleep(2000);
 	t.getOurCompany().click();
+	Thread.sleep(2000);
 	t.getCreateCustomer().click();
+	Thread.sleep(2000);
 	String actualtext = t.getVerifyCustomer().getText();
 	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 	wait.until(ExpectedConditions.textToBePresentInElement(t.getVerifyCustomer(), custName));

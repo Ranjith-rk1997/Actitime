@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import com.actitime.generic.BaseClass;
 import com.actitime.pom.HomePage;
 import com.actitime.pom.TaskPage;
-//@Listeners(com.actitime.generic.ListenerImplementation.class)
+@Listeners(com.actitime.generic.ListenerImplementation.class)
 public class TaskModule extends BaseClass {
 	@Test
 	public void createTask() throws InterruptedException {
@@ -23,8 +23,8 @@ public class TaskModule extends BaseClass {
 		t.getProjectDescriptionTxt().sendKeys("Ranjith");
 		t.getSelectCustomerDD().click();
 		t.getSelectCustomer().click();
-		t.getProjectDescriptionTxt().sendKeys("KUMAr");
+		t.getProjectDescriptionTxt().sendKeys("KUMAR");
 		t.getTaskNameTxt().sendKeys("kl");
-		t.getCreateProjectBtn();
+		t.getCreateProjectBtn().click();
 	}
 }
