@@ -33,8 +33,8 @@ public class LoginSteps {
 	   driver.findElement(By.xpath("//input[@formcontrolname='username']")).sendKeys("ortoni");
 	}
 
-	@Given("usert entered the password as pass1234")
-	public void usertEnteredThePasswordAsPass() {
+	@Given("user entered the password as pass1234")
+	public void userEnteredThePasswordAsPass() {
 	   driver.findElement(By.xpath("//input[@data-placeholder='Password']")).sendKeys("pass1234");
 	}
 
